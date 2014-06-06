@@ -1,0 +1,24 @@
+
+#accordion{
+  font-size: 1em;
+  font-family: sans-serif;
+  margin-bottom: 10px;
+}
+
+#accordion .ui-accordion-header {
+  background: none repeat-x scroll #E6E6E6;
+  margin-bottom: 0px;
+}
+
+#accordion .ui-accordion-content {  
+  font-size: 1em;
+  background: none repeat scroll 0 0 #F5F5F5;
+  color: #34302D;
+  font-family: sans-serif;
+}
+
+#accordion .ui-accordion-header-active{
+  background: none repeat-x scroll #E6E6E6;
+}
+
+
