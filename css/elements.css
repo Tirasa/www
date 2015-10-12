@@ -358,6 +358,6 @@ table tbody tr.dark{color:#979797; background-color:#E8E8E8;}
 /* General Rounded Corners */
 
 .rnd5, .list.tagcloud.rnd5 a, form.rnd5 input, form.rnd5 textarea{-moz-border-radius:5px; -webkit-border-radius:5px; border-radius:5px;}
-.rnd8, .list.tagcloud.rnd8 a, form.rnd8 input, form.rnd8 textarea{-moz-border-radius:8px; -webkit-border-radius:8px; border-radius:8px;}
+.rnd8, .list.tagcloud.rnd8 a, form.rnd8 input, form.rnd8 textarea{-moz-border-radius:2px; -webkit-border-radius:2px; border-radius:2px; padding-left: 2px; padding-right: 2px;}
 .rnd10, .list.tagcloud.rnd10 a, form.rnd10 input, form.rnd10 textarea{-moz-border-radius:10px; -webkit-border-radius:10px; border-radius:10px;}
 .rnd12, .list.tagcloud.rnd12 a, form.rnd12 input, form.rnd12 textarea{-moz-border-radius:12px; -webkit-border-radius:12px; border-radius:12px;}
