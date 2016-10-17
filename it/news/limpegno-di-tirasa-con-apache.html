@@ -39,6 +39,7 @@
 <meta content="off" http-equiv="x-dns-prefetch-control">
 <meta content="width=device-width, initial-scale=1.0" name="viewport">
 <link media="all" type="text/css" rel="stylesheet" href="css/main.css">
+<link media="all" type="text/css" rel="stylesheet" href="css/custom.css">
 <link media="all" type="text/css" rel="stylesheet" href="css/mediaqueries.css">
 <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
 <link type="text/css" rel="stylesheet" href="http://fonts.googleapis.com/css?family=Varela+Round|Montserrat:400,700">
@@ -47,7 +48,16 @@
       hs.graphicsDir = 'css/graphics/';
 
       jQuery.noConflict()(function ($) {
-        $("#accordion").accordion();
+        $("#accordion").accordion({
+          collapsible: true,
+          heightStyle: "content"
+        });
+        if (location.hash) {
+          var tabIndex = parseInt(window.location.hash.substring(1));
+          $("#accordion").accordion('option', 'active', tabIndex);
+        } else {
+          $("#accordion").accordion('option', 'active', false);
+        }
 
         $(document).ready(function() {
           $.cookiesDirective({
@@ -80,10 +90,10 @@
 <link media="all" href="css/accordion.css" type="text/css" rel="stylesheet">
 <link href="//code.jquery.com/ui/1.10.4/themes/smoothness/jquery-ui.css" rel="stylesheet">
 </head>
-<body>
+<body xmlns:str="http://xsltsl.org/string">
 <div class="wrapper row0">
 <div id="header" class="full_width clear">
-<ul class="list none" style="margin: 0px;text-align: right;color: white;font-family: 'Montserrat';font-size: 12px;padding-top: 0.25%;;width: 100%;min-height: 17px;"></ul>
+<ul class="list none" style="margin: 0px;text-align: right;color: white;font-family: 'Montserrat';font-size: 12px;padding-top: 0.25%;;width: 100%;min-height: 17px;" id="languages"></ul>
 </div>
 </div>
 <div style="padding-bottom: 15px;padding-top: 15px;" class="wrapper row1">
@@ -145,7 +155,7 @@
     
 <div>
 <div class="languages" id="header">
-<ul>
+<ul id="languages">
 <li style="display:inline">
 <a style="color:#d6d5d5" href="/news/tirasa-commitment-at-apache.html">
                   EN</a>

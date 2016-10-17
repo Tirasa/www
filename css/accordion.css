@@ -21,4 +21,7 @@
   background: none repeat-x scroll #E6E6E6;
 }
 
+.ui-widget-content a {
+  color: #9293c8 !important;
+}
 

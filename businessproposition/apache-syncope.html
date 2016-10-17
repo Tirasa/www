@@ -11,8 +11,8 @@
 <meta content="Open Source Excellence" itemprop="description">
 <meta content="Open Source Excellence" itemprop="headline">
 <meta content="http://www.tirasa.net/businessproposition/apache-syncope.html" itemprop="url">
-<meta content="2016-10-13 16:54:32" itemprop="dateModified">
-<meta content="2016-10-13 16:54:32" itemprop="datePublished">
+<meta content="2016-10-17 16:55:10" itemprop="dateModified">
+<meta content="2016-10-17 16:55:10" itemprop="datePublished">
 <span itemtype="https://schema.org/Corporation" itemscope="" itemprop="publisher"><span itemtype="https://schema.org/ImageObject" itemscope="" itemprop="logo">
 <meta content="http://www.tirasa.net/images/logo.png" itemprop="url">
 </span>
@@ -23,22 +23,23 @@
 <meta content="Tirasa - Apache Syncope" name="twitter:title">
 <meta content="Open Source Excellence" name="twitter:description">
 <meta content="@TirasaNet" name="twitter:creator">
-<meta content="http://www.tirasa.net/images/farfalla.png" name="twitter:image">
+<meta content="http://www.tirasa.net/gallery/tirasa/site/businessproposition/support.png" name="twitter:image">
 <meta content="Tirasa - Apache Syncope" property="og:title">
 <meta content="en_US" property="og:locale">
 <meta content="article" property="og:type">
 <meta content="http://www.tirasa.net/businessproposition/apache-syncope.html" property="og:url">
-<meta content="http://www.tirasa.net/images/farfalla.png" property="og:image">
+<meta content="http://www.tirasa.net/gallery/tirasa/site/businessproposition/support.png" property="og:image">
 <meta content="Open Source Excellence" property="og:description">
 <meta content="Tirasa" property="og:site_name">
-<meta content="2016-10-13 16:54:32" property="article:published_time">
-<meta content="2016-10-13 16:54:32" property="article:modified_time">
+<meta content="2016-10-17 16:55:10" property="article:published_time">
+<meta content="2016-10-17 16:55:10" property="article:modified_time">
 <meta content="252836668438434" property="fb:app_id">
 <meta charset="UTF-8">
 <link type="image/vnd.microsoft.icon" href="images/favicon.png" rel="shortcut icon">
 <meta content="off" http-equiv="x-dns-prefetch-control">
 <meta content="width=device-width, initial-scale=1.0" name="viewport">
 <link media="all" type="text/css" rel="stylesheet" href="css/main.css">
+<link media="all" type="text/css" rel="stylesheet" href="css/custom.css">
 <link media="all" type="text/css" rel="stylesheet" href="css/mediaqueries.css">
 <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
 <link type="text/css" rel="stylesheet" href="http://fonts.googleapis.com/css?family=Varela+Round|Montserrat:400,700">
@@ -47,7 +48,16 @@
       hs.graphicsDir = 'css/graphics/';
 
       jQuery.noConflict()(function ($) {
-        $("#accordion").accordion();
+        $("#accordion").accordion({
+          collapsible: true,
+          heightStyle: "content"
+        });
+        if (location.hash) {
+          var tabIndex = parseInt(window.location.hash.substring(1));
+          $("#accordion").accordion('option', 'active', tabIndex);
+        } else {
+          $("#accordion").accordion('option', 'active', false);
+        }
 
         $(document).ready(function() {
           $.cookiesDirective({
@@ -80,10 +90,10 @@
 <link media="all" href="css/accordion.css" type="text/css" rel="stylesheet">
 <link href="//code.jquery.com/ui/1.10.4/themes/smoothness/jquery-ui.css" rel="stylesheet">
 </head>
-<body>
+<body xmlns:str="http://xsltsl.org/string">
 <div class="wrapper row0">
 <div id="header" class="full_width clear">
-<ul class="list none" style="margin: 0px;text-align: right;color: white;font-family: 'Montserrat';font-size: 12px;padding-top: 0.25%;;width: 100%;min-height: 17px;"></ul>
+<ul class="list none" style="margin: 0px;text-align: right;color: white;font-family: 'Montserrat';font-size: 12px;padding-top: 0.25%;;width: 100%;min-height: 17px;" id="languages"></ul>
 </div>
 </div>
 <div style="padding-bottom: 15px;padding-top: 15px;" class="wrapper row1">
@@ -145,7 +155,7 @@
     
 <div>
 <div class="languages" id="header">
-<ul>
+<ul id="languages">
 <li style="display:inline;color:#d6d5d5">EN</li>
 <li style="display:inline">|</li>
 <li style="display:inline">
@@ -161,49 +171,179 @@
 <a target="_blank" href="http://syncope.apache.org">Apache Syncope</a> is an
 Open Source Identity Management software that we developed and later donated to
 the Apache Software Foundation. Since then, we continue to lead the development
-as main sponsor.</p>
-<p>
-<a target="_blank" href="http://syncope.apache.org/">Apache Syncope</a> can
-be downloaded and used free of charge under the terms of the
-<a target="_blank" href="https://www.apache.org/licenses/LICENSE-2.0.html">Apache
-License 2.0</a>.</p>
-<h2>Services Offered: </h2>
-<p>If you have chosen this product as software for your identity management, we
-can help you with our services:</p>
-<ol>
+as main sponsor. <br>
+More details are available about its
+<a href="/businessproposition/apache-syncope-history.html">history</a>.</p>
+<p>However, a <a href="/businessproposition/apache-syncope-try.html">good try</a> is worth a thousand
+words.</p>
+<h2>Services Offered </h2>
+<p>If you have chosen Apache Syncope as your Identity Manager, we can help you
+with our services:</p>
+<div id="accordion">
+<h3>Product evaluation </h3>
 
-<li>Product evaluation
-<ul>
+<div id="product-evaluation">
 
-<li>workshop;</li>
+<p>Apache Syncope is Open Source and license free: just download and
+<a href="/businessproposition/apache-syncope-try.html">evaluate</a>, no subscription is required.</p>
 
-<li>short
+
+<p>In case of need, we can organize a quick workshop or plan a Proof of Concept.
+</p>
+
+</div>
+
+<h3>Workshop </h3>
+
+<div id="workshop">
+
+<p>Brief (from 1 day to 1 week maximum) but intense full immersion with
+best-of-breed Syncope experts to identify IAM needs and plan for resolution.
+</p>
+
+</div>
+
+<h3>Proof of Concept </h3>
+
+<div id="poc">
+
+<p>Short
 <a target="_blank" href="http://en.wikipedia.org/wiki/Proof_of_concept">PoC</a>
 (involvement of maximum 5 days
 <a target="_blank" href="http://en.wikipedia.org/wiki/Full-time_equivalent">FTE</a>)
-based on customer requirements;</li>
+based on customer requirements.</p>
+
+</div>
+
+<h3>Development Support </h3>
+
+<div id="development">
+
+<p>Dedicated mail-based support for customers that want to develop their Apache
+Syncope based solution but needs guidance in the design and implementation
+phases. <br>
+Includes support for reproducible bugs resolution but not troubleshooting.</p>
+
+
+<p>
+<strong>Minuetto</strong>
+</p>
+
+
+<ul>
+
+<li>Limited to official Apache Syncope releases</li>
+
+<li>Raise support case via customer dedicated mailing-list&nbsp;</li>
+
+<li>Response time 4 hours (8x5)</li>
+
+<li>Expert assistance&nbsp;</li>
+
+<li>Emergency patches</li>
 
 </ul>
 
-</li>
+</div>
 
-<li>Product extension / customization: when standard Syncope features are not
-fully applicable to customer's needs;</li>
+<h3>Production Support </h3>
 
-<li>Delivery of Apache Syncope based solutions, under customer's direction and
-project management;</li>
+<div id="production">
 
-<li>Dedicated mail-based support for customers that want to develop their Apache
-Syncope based solution but needs guidance in the design and implementation
-phases;</li>
+<p>Second-level operational support: dedicated to the production phase when
+support to manage any rolled-out system's malfunctioning is needed. <br>
+The offer does not include support for system update.</p>
 
-<li>Second-level operational support;</li>
 
-<li>Ad-hoc services for any other customer need.</li>
+<p>
+<strong>Sonata</strong> 
+<br>
+Our base support for production:</p>
 
-</ol>
-<p>For more information, check our dedicate Apache Syncope
-<a target="_blank" href="http://syncope.tirasa.net">support site</a>.</p>
+
+<ul>
+
+<li>Limited to the official Apache Syncope releases&nbsp;</li>
+
+<li>Raise support case via customer dedicated mailing-list&nbsp;</li>
+
+<li>Response time 2 hours (8x5)&nbsp;</li>
+
+<li>Known/Reproducible bug fixing provided by non public releases</li>
+
+<li>Emergency&nbsp;patches</li>
+
+<li>Troubleshooting excluded</li>
+
+</ul>
+
+
+<p>
+<strong>Quartetto</strong> 
+<br>
+If you need something more, here is our trade-off support for production:</p>
+
+
+<ul>
+
+<li>Include Sonata</li>
+
+<li>Bug fixing provided by non public releases</li>
+
+<li>Troubleshooting included</li>
+
+</ul>
+
+
+<p>
+<strong>Sinfonia</strong> 
+<br>
+Our best support for production:</p>
+
+
+<ul>
+
+<li>Include Quartetto</li>
+
+<li>Upgrade to new releases</li>
+
+<li>Telephone access (8x5)</li>
+
+</ul>
+
+</div>
+
+<h3>Extension / Customization </h3>
+
+<div id="customization">
+
+<p>Product extension / customization: when standard Syncope features are not
+fully applicable to customer's needs.</p>
+
+</div>
+
+<h3>Delivery </h3>
+
+<div id="delivery">
+
+<p>Delivery of Apache Syncope based solutions, under customer's direction and
+project management.</p>
+
+</div>
+
+<h3>Ad-hoc </h3>
+
+<div id="adhoc">
+
+<p>Ad-hoc services for any other IAM need.</p>
+
+</div>
+
+</div>
+<p>
+<img style="margin: 10px;" src="/gallery/tirasa/site/businessproposition/support.png">For more
+information and pricing, just <a href="mailto:syncope@tirasa.net">drop an
+e-mail</a>.</p>
 </section>
 </div>
 </div>
@@ -452,6 +592,39 @@ Foundation</a>.</p>
 </div>
 </div>
 <script type="text/javascript">
+        var getFirstBrowserLanguage = function () {
+          var nav = window.navigator,
+          browserLanguagePropertyKeys = ['language', 'browserLanguage', 'systemLanguage', 'userLanguage'], i, language;
+
+          // support for HTML 5.1 "navigator.languages"
+          if (Array.isArray(nav.languages)) {
+            for (i = 0; i < nav.languages.length; i++) {
+              language = nav.languages[i];
+              if (language && language.length) {
+                return language;
+              }
+            }
+          }
+
+          // support for other well known properties in browsers
+          for (i = 0; i < browserLanguagePropertyKeys.length; i++) {
+            language = nav[browserLanguagePropertyKeys[i]];
+            if (language && language.length) {
+              return language;
+            }
+          }
+
+          return null;
+        };
+        if (getFirstBrowserLanguage().indexOf('it') > -1) {
+          var answer = confirm('Questa pagina è disponibile anche in italiano. Procedere?'); 
+          if (answer) { 
+          
+            window.location = '/site/it/businessproposition/apache-syncope.html'; 
+           
+          }
+        }
+      </script><script type="text/javascript">
   var _paq = _paq || [];
   _paq.push(["trackPageView"]);
   _paq.push(["enableLinkTracking"]);

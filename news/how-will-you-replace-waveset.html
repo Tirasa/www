@@ -39,6 +39,7 @@
 <meta content="off" http-equiv="x-dns-prefetch-control">
 <meta content="width=device-width, initial-scale=1.0" name="viewport">
 <link media="all" type="text/css" rel="stylesheet" href="css/main.css">
+<link media="all" type="text/css" rel="stylesheet" href="css/custom.css">
 <link media="all" type="text/css" rel="stylesheet" href="css/mediaqueries.css">
 <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
 <link type="text/css" rel="stylesheet" href="http://fonts.googleapis.com/css?family=Varela+Round|Montserrat:400,700">
@@ -47,7 +48,16 @@
       hs.graphicsDir = 'css/graphics/';
 
       jQuery.noConflict()(function ($) {
-        $("#accordion").accordion();
+        $("#accordion").accordion({
+          collapsible: true,
+          heightStyle: "content"
+        });
+        if (location.hash) {
+          var tabIndex = parseInt(window.location.hash.substring(1));
+          $("#accordion").accordion('option', 'active', tabIndex);
+        } else {
+          $("#accordion").accordion('option', 'active', false);
+        }
 
         $(document).ready(function() {
           $.cookiesDirective({
@@ -80,10 +90,10 @@
 <link media="all" href="css/accordion.css" type="text/css" rel="stylesheet">
 <link href="//code.jquery.com/ui/1.10.4/themes/smoothness/jquery-ui.css" rel="stylesheet">
 </head>
-<body>
+<body xmlns:str="http://xsltsl.org/string">
 <div class="wrapper row0">
 <div id="header" class="full_width clear">
-<ul class="list none" style="margin: 0px;text-align: right;color: white;font-family: 'Montserrat';font-size: 12px;padding-top: 0.25%;;width: 100%;min-height: 17px;"></ul>
+<ul class="list none" style="margin: 0px;text-align: right;color: white;font-family: 'Montserrat';font-size: 12px;padding-top: 0.25%;;width: 100%;min-height: 17px;" id="languages"></ul>
 </div>
 </div>
 <div style="padding-bottom: 15px;padding-top: 15px;" class="wrapper row1">
@@ -145,7 +155,7 @@
     
 <div>
 <div class="languages" id="header">
-<ul>
+<ul id="languages">
 <li style="display:inline;color:#d6d5d5">EN</li>
 <li style="display:inline">|</li>
 <li style="display:inline">
@@ -177,7 +187,7 @@ and features <a target="_blank" href="http://connid.tirasa.net">ConnId</a>, the 
 of original Sun Identity Connector Framework - which could allow you to save
 investments made in the past.</p>
 <p>If the Sun IAM products EOL has you wondering what&rsquo;s next,
-<a target="_blank" href="mailto:syncope@tirasa.net">drop an e-mail</a>, we can help you.</p>
+<a href="mailto:syncope@tirasa.net">drop an e-mail</a>, we can help you.</p>
 <a target="_blank" href="http://www.linkedin.com/shareArticle?mini=true&url=http://www.tirasa.net/news/how-will-you-replace-waveset.html&title=How will you replace Oracle Waveset?&summary=Oracle Waveset (former Sun IdM) is end-of-line on Dec 31st: are you ready for this?"><img alt="" src="images/linkedin_square_color-24.png"></a>&nbsp;
           <a target="_blank" href="https://twitter.com/intent/tweet?url=http://www.tirasa.net/news/how-will-you-replace-waveset.html&text=How will you replace Oracle Waveset?"><img alt="" src="images/twitter_square-24.png"></a>&nbsp;
           <a target="_blank" href="https://facebook.com/sharer.php?u=http://www.tirasa.net/news/how-will-you-replace-waveset.html"><img alt="" src="images/facebook_square-24.png"></a>&nbsp;
@@ -433,6 +443,39 @@ Foundation</a>.</p>
 </div>
 </div>
 <script type="text/javascript">
+        var getFirstBrowserLanguage = function () {
+          var nav = window.navigator,
+          browserLanguagePropertyKeys = ['language', 'browserLanguage', 'systemLanguage', 'userLanguage'], i, language;
+
+          // support for HTML 5.1 "navigator.languages"
+          if (Array.isArray(nav.languages)) {
+            for (i = 0; i < nav.languages.length; i++) {
+              language = nav.languages[i];
+              if (language && language.length) {
+                return language;
+              }
+            }
+          }
+
+          // support for other well known properties in browsers
+          for (i = 0; i < browserLanguagePropertyKeys.length; i++) {
+            language = nav[browserLanguagePropertyKeys[i]];
+            if (language && language.length) {
+              return language;
+            }
+          }
+
+          return null;
+        };
+        if (getFirstBrowserLanguage().indexOf('it') > -1) {
+          var answer = confirm('Questa pagina è disponibile anche in italiano. Procedere?'); 
+          if (answer) { 
+          
+            window.location = '/site/it/news/come-rimpiazzare-waveset.html'; 
+           
+          }
+        }
+      </script><script type="text/javascript">
   var _paq = _paq || [];
   _paq.push(["trackPageView"]);
   _paq.push(["enableLinkTracking"]);

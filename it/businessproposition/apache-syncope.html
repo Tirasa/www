@@ -11,8 +11,8 @@
 <meta content="Open Source Excellence" itemprop="description">
 <meta content="Open Source Excellence" itemprop="headline">
 <meta content="http://www.tirasa.nete/live/it/businessproposition/apache-syncope.html" itemprop="url">
-<meta content="2016-10-13 16:54:42" itemprop="dateModified">
-<meta content="2016-10-13 16:54:42" itemprop="datePublished">
+<meta content="2016-10-17 16:55:26" itemprop="dateModified">
+<meta content="2016-10-17 16:55:26" itemprop="datePublished">
 <span itemtype="https://schema.org/Corporation" itemscope="" itemprop="publisher"><span itemtype="https://schema.org/ImageObject" itemscope="" itemprop="logo">
 <meta content="http://www.tirasa.net/images/logo.png" itemprop="url">
 </span>
@@ -23,22 +23,23 @@
 <meta content="Tirasa - Apache Syncope" name="twitter:title">
 <meta content="Open Source Excellence" name="twitter:description">
 <meta content="@TirasaNet" name="twitter:creator">
-<meta content="http://www.tirasa.net/images/farfalla.png" name="twitter:image">
+<meta content="http://www.tirasa.net/gallery/tirasa/site/businessproposition/support.png" name="twitter:image">
 <meta content="Tirasa - Apache Syncope" property="og:title">
 <meta content="it_IT" property="og:locale">
 <meta content="article" property="og:type">
 <meta content="http://www.tirasa.nete/live/it/businessproposition/apache-syncope.html" property="og:url">
-<meta content="http://www.tirasa.net/images/farfalla.png" property="og:image">
+<meta content="http://www.tirasa.net/gallery/tirasa/site/businessproposition/support.png" property="og:image">
 <meta content="Open Source Excellence" property="og:description">
 <meta content="Tirasa" property="og:site_name">
-<meta content="2016-10-13 16:54:42" property="article:published_time">
-<meta content="2016-10-13 16:54:42" property="article:modified_time">
+<meta content="2016-10-17 16:55:26" property="article:published_time">
+<meta content="2016-10-17 16:55:26" property="article:modified_time">
 <meta content="252836668438434" property="fb:app_id">
 <meta charset="UTF-8">
 <link type="image/vnd.microsoft.icon" href="images/favicon.png" rel="shortcut icon">
 <meta content="off" http-equiv="x-dns-prefetch-control">
 <meta content="width=device-width, initial-scale=1.0" name="viewport">
 <link media="all" type="text/css" rel="stylesheet" href="css/main.css">
+<link media="all" type="text/css" rel="stylesheet" href="css/custom.css">
 <link media="all" type="text/css" rel="stylesheet" href="css/mediaqueries.css">
 <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
 <link type="text/css" rel="stylesheet" href="http://fonts.googleapis.com/css?family=Varela+Round|Montserrat:400,700">
@@ -47,7 +48,16 @@
       hs.graphicsDir = 'css/graphics/';
 
       jQuery.noConflict()(function ($) {
-        $("#accordion").accordion();
+        $("#accordion").accordion({
+          collapsible: true,
+          heightStyle: "content"
+        });
+        if (location.hash) {
+          var tabIndex = parseInt(window.location.hash.substring(1));
+          $("#accordion").accordion('option', 'active', tabIndex);
+        } else {
+          $("#accordion").accordion('option', 'active', false);
+        }
 
         $(document).ready(function() {
           $.cookiesDirective({
@@ -80,10 +90,10 @@
 <link media="all" href="css/accordion.css" type="text/css" rel="stylesheet">
 <link href="//code.jquery.com/ui/1.10.4/themes/smoothness/jquery-ui.css" rel="stylesheet">
 </head>
-<body>
+<body xmlns:str="http://xsltsl.org/string">
 <div class="wrapper row0">
 <div id="header" class="full_width clear">
-<ul class="list none" style="margin: 0px;text-align: right;color: white;font-family: 'Montserrat';font-size: 12px;padding-top: 0.25%;;width: 100%;min-height: 17px;"></ul>
+<ul class="list none" style="margin: 0px;text-align: right;color: white;font-family: 'Montserrat';font-size: 12px;padding-top: 0.25%;;width: 100%;min-height: 17px;" id="languages"></ul>
 </div>
 </div>
 <div style="padding-bottom: 15px;padding-top: 15px;" class="wrapper row1">
@@ -145,7 +155,7 @@
     
 <div>
 <div class="languages" id="header">
-<ul>
+<ul id="languages">
 <li style="display:inline">
 <a style="color:#d6d5d5" href="/businessproposition/apache-syncope.html">
                   EN</a>
@@ -161,49 +171,186 @@
 <a target="_blank" href="http://syncope.apache.org">Apache Syncope</a> &egrave; un software di
 Identity Management Open Source da noi ideato e successivamente donato
 all'Apache Software Foundation. Da allora continuiamo a guidarne lo sviluppo
-essendone i maggiori sponsor.</p>
-<p>
-<a target="_blank" href="http://syncope.apache.org">Apache Syncope</a> pu&ograve; essere scaricato
-ed usato gratuitamente nei termini della
-<a target="_blank" href="https://www.apache.org/licenses/LICENSE-2.0.html">Apache License
-2.0</a>.</p>
+essendone i maggiori sponsor. <br>
+Maggiori dettagli sulla sua <a href="/it/businessproposition/apache-syncope-storia.html">storia</a>.</p>
+<p>Tuttavia, una <a href="/it/businessproposition/apache-syncope-prova.html">prova</a> vale pi&ugrave; di mille
+parole.</p>
 <h2>Servizi offerti </h2>
-<p>Se avete scelto questo prodotto come software per la vostra gestione delle
-identit&agrave;, possiamo aiutarvi con i nostri servizi:</p>
-<ol>
+<p>Se avete scelto Apache Syncope come IdM, possiamo aiutarvi con i nostri
+servizi:</p>
+<div id="accordion">
+<h3>Valutazione del Prodotto </h3>
 
-<li>Valutazione del prodotto
+<div id="product-evaluation">
+
+<p>Apache Syncope &egrave; Open Source e senza costi di licenza: basta scaricarlo per
+<a href="/it/businessproposition/apache-syncope-prova.html">valutarlo</a>, non &egrave; richiesta sottoscrizione.
+</p>
+
+
+<p>In caso di necessit&agrave;, possiamo organizzare un breve workshop o pianificare
+una Proof of Concept.</p>
+
+</div>
+
+<h3>Workshop </h3>
+
+<div id="workshop">
+
+<p>Breve (da 1 giorno ad 1 settimana al massimo) ma intensa immersione con i
+migliori esperti di Syncope per individuare le problematiche IAM e pianificare
+la risoluzione.</p>
+
+</div>
+
+<h3>Proof of Concept </h3>
+
+<div id="poc">
+
+<p>
+Breve&nbsp;<a target="_blank" href="http://en.wikipedia.org/wiki/Proof_of_concept">PoC</a>
+(coinvolgimento massimo di 5
+giorni&nbsp;<a target="_blank" href="http://en.wikipedia.org/wiki/Full-time_equivalent">FTE</a>)
+basata sui requisiti del cliente.</p>
+
+</div>
+
+<h3>Supporto allo Sviluppo </h3>
+
+<div id="development">
+
+<p>Supporto dedicato via e-mail per chi vuole sviluppare da s&eacute; la propria
+soluzione basata su Apache Syncope ma ritiene che una guida tecnica esperta ne
+possa accelerare la progettazione e l'implementazione. <br>
+Include supporto per malfunzionamenti riproducibli ma non il troubleshooting.
+</p>
+
+
+<p>
+<strong>Minuetto</strong>
+</p>
+
+
 <ul>
 
-<li>workshop di una giornata;</li>
+<li>Limitato alle release ufficiali di Apache Syncope</li>
 
-<li>breve <a target="_blank" href="http://it.wikipedia.org/wiki/Proof_of_concept">PoC</a>
-(coinvolgimento massimo di 5
-giorni&nbsp;<a target="_blank" href="http://it.wikipedia.org/wiki/Equivalente_a_tempo_pieno">FTE</a>)
-basata sui requisiti del cliente;</li>
+<li>Raise support case via customer dedicated mailing-list&nbsp;</li>
+
+<li>Richiesta di supporto tramite mailing-list dedicata al cliente</li>
+
+<li>Tempo di risposta 4 ore (8x5)</li>
+
+<li>Assistenza tecnica da parte di esperti</li>
+
+<li>Patch di emergenza</li>
 
 </ul>
 
+</div>
+
+<h3>Supporto alla Produzione </h3>
+
+<div id="production">
+
+<p>Supporto operativo di secondo livello: dedicato alla produzione in cui &egrave;
+necessario un supporto per gestire eventuali malfunzionamenti che potrebbero
+insorgere durante l'utilizzo effettivo del sistema. <br>
+L'offerta non include alcun tipo di supporto per eventuali attivit&agrave; evolutive.
+</p>
+
+
+<p>
+<strong>Sonata</strong> 
+<br>
+Il nostro supporto di base per la produzione:</p>
+
+
+<ul>
+
+<li>Limitato alle release ufficiali di Apache Syncope</li>
+
+<li>Richiesta di supporto tramite mailing-list dedicata al cliente</li>
+
+<li>Tempo di risposta 2 ore (8x5)&nbsp;</li>
+
+<li>Risoluzione di bachi conosciuti/riproducibili tramite rilasci non pubblici
 </li>
 
-<li>Estensioni e personalizzazioni sul prodotto: quando le caratteristiche di
-Apache Syncope non sono pienamente applicabili alle esigenze del cliente; &nbsp;</li>
+<li>Patch di emergenza</li>
 
-<li>Sviluppo di soluzioni di identity management dietro specifiche e
-coordinamento del cliente;</li>
+<li>Troubleshooting escluso</li>
 
-<li>Supporto dedicato via e-mail per clienti che intendono sviluppare
-autonomamente la propria soluzione basata su Apache Syncope ma necessitano di
-supporto in fase di progettazione ed implementazione;</li>
+</ul>
 
-<li>Supporto operativo di secondo livello;</li>
 
-<li>Servizi ad-hoc per ogni altra esigenza del cliente.</li>
+<p>
+<strong>Quartetto</strong> 
+<br>
+Se hai bisogno di qualcosa di pi&ugrave;, questo &egrave; il nostro supporto intermedio per la
+produzione:</p>
 
-</ol>
-<p>Per maggiori informazioni, &egrave; disponibile il nostro
-<a target="_blank" href="http://syncope.tirasa.net">sito di supporto</a> deidcato ad Apache
-Syncope.</p>
+
+<ul>
+
+<li>Include Sonata</li>
+
+<li>Risoluzione di bachi tramite rilasci non pubblici</li>
+
+<li>Troubleshooting incluso</li>
+
+</ul>
+
+
+<p>
+<strong>Sinfonia</strong> 
+<br>
+Il nostro migliore supporto per la produzione:</p>
+
+
+<ul>
+
+<li>Include Quartetto</li>
+
+<li>Upgrade a nuove release</li>
+
+<li>Accesso telefonico (8x5)&nbsp;</li>
+
+</ul>
+
+</div>
+
+<h3>Estensioni / Personalizzazioni </h3>
+
+<div id="customization">
+
+<p>Estensioni e personalizzazioni sul prodotto: quando le caratteristiche di
+Apache Syncope non sono pienamente applicabili alle esigenze del cliente.</p>
+
+</div>
+
+<h3>Progetti </h3>
+
+<div id="delivery">
+
+<p>Sviluppo di soluzioni di identity management dietro specifiche e
+coordinamento del cliente.</p>
+
+</div>
+
+<h3>Ad-hoc </h3>
+
+<div id="adhoc">
+
+<p>Servizi ad-hoc per ogni altra esigenza IAM del cliente.</p>
+
+</div>
+
+</div>
+<p>
+<img style="margin: 10px;" src="/gallery/tirasa/site/businessproposition/support.png">Per informazioni ed
+offerte economiche basta&nbsp;<a href="mailto:syncope@tirasa.net">inviare una
+e-mail</a>.</p>
 </section>
 </div>
 </div>
