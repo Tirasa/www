@@ -11,8 +11,8 @@
 <meta content="Open Source Excellence" itemprop="description">
 <meta content="Open Source Excellence" itemprop="headline">
 <meta content="http://www.tirasa.net/mission-vision.html" itemprop="url">
-<meta content="2016-10-17 18:07:08" itemprop="dateModified">
-<meta content="2016-10-17 18:07:08" itemprop="datePublished">
+<meta content="2016-10-18 11:01:34" itemprop="dateModified">
+<meta content="2016-10-18 11:01:34" itemprop="datePublished">
 <span itemtype="https://schema.org/Corporation" itemscope="" itemprop="publisher"><span itemtype="https://schema.org/ImageObject" itemscope="" itemprop="logo">
 <meta content="http://www.tirasa.net/images/logo.png" itemprop="url">
 </span>
@@ -31,8 +31,8 @@
 <meta content="http://www.tirasa.net/images/farfalla.png" property="og:image">
 <meta content="Open Source Excellence" property="og:description">
 <meta content="Tirasa" property="og:site_name">
-<meta content="2016-10-17 18:07:08" property="article:published_time">
-<meta content="2016-10-17 18:07:08" property="article:modified_time">
+<meta content="2016-10-18 11:01:34" property="article:published_time">
+<meta content="2016-10-18 11:01:34" property="article:modified_time">
 <meta content="252836668438434" property="fb:app_id">
 <meta charset="UTF-8">
 <link type="image/vnd.microsoft.icon" href="images/favicon.png" rel="shortcut icon">
@@ -44,19 +44,18 @@
 <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
 <link type="text/css" rel="stylesheet" href="http://fonts.googleapis.com/css?family=Varela+Round|Montserrat:400,700">
 <link type="text/css" rel="stylesheet" href="http://fonts.googleapis.com/css?family=Loved+by+the+King">
-<script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script><script src="js/jquery-latest.min.js"></script><script src="js/jquery-ui.min.js"></script><script src="js/jquery-mobilemenu.min.js"></script><script src="js/jquery.cookiesdirective.js"></script><script src="js/custom.js"></script><script src="js/highslide.js" type="text/javascript"></script><script type="text/javascript">
+<script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script><script src="js/jquery-latest.min.js"></script><script src="js/jquery-ui.min.js"></script><script src="js/jquery-mobilemenu.min.js"></script><script src="js/jquery.cookiesdirective.js"></script><script src="js/js.cookie.js"></script><script src="js/custom.js"></script><script src="js/highslide.js"></script><script type="text/javascript">
       hs.graphicsDir = 'css/graphics/';
 
       jQuery.noConflict()(function ($) {
         $("#accordion").accordion({
+          active: false,
           collapsible: true,
           heightStyle: "content"
         });
         if (location.hash) {
           var tabIndex = parseInt(window.location.hash.substring(1));
           $("#accordion").accordion('option', 'active', tabIndex);
-        } else {
-          $("#accordion").accordion('option', 'active', false);
         }
 
         $(document).ready(function() {
@@ -157,7 +156,7 @@
 <div class="languages" id="header">
 <ul id="languages">
 <li style="display:inline">
-<a style="color:#d6d5d5" href="/mission-vision.html">
+<a onclick="Cookies.remove('preferIT')" style="color:#d6d5d5" href="/mission-vision.html">
               EN</a>
 </li>
 <li style="display:inline">|</li>
@@ -481,14 +480,19 @@ Foundation</a>.</p>
 
           return null;
         };
-        if (getFirstBrowserLanguage().indexOf('it') > -1) {
-          var answer = confirm('Questa pagina è disponibile anche in italiano. Procedere?'); 
-          if (answer) { 
+        var answer = Cookies.get('preferIT');
+        if (typeof answer != 'undefined') {
+          answer = answer == 'true' ? true : false;
+        }
+        if (typeof answer == 'undefined' && getFirstBrowserLanguage().indexOf('it') > -1) {
+          answer = confirm('Questa pagina esiste anche in italiano. Preferisci visualizzare i contenuti in italiano, quando disponibili?'); 
+        }
+        if (answer) { 
           
             window.location = jQuery('#languages').find('a').attr('href');
            
-          }
         }
+        Cookies.set('preferIT', answer, { expires: 3650 });
       </script><script type="text/javascript">
   var _paq = _paq || [];
   _paq.push(["trackPageView"]);
