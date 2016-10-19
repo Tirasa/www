@@ -3,6 +3,7 @@
   font-size: 1em;
   font-family: sans-serif;
   margin-bottom: 10px;
+  clear: both;
 }
 
 #accordion .ui-accordion-header {
