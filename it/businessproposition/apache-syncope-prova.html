@@ -11,8 +11,8 @@
 <meta content="Open Source Excellence" itemprop="description">
 <meta content="Open Source Excellence" itemprop="headline">
 <meta content="http://www.tirasa.nete/live/it/businessproposition/apache-syncope-prova.html" itemprop="url">
-<meta content="2016-11-03 09:47:12" itemprop="dateModified">
-<meta content="2016-11-03 09:47:12" itemprop="datePublished">
+<meta content="2016-11-10 17:39:07" itemprop="dateModified">
+<meta content="2016-11-10 17:39:07" itemprop="datePublished">
 <span itemtype="https://schema.org/Corporation" itemscope="" itemprop="publisher"><span itemtype="https://schema.org/ImageObject" itemscope="" itemprop="logo">
 <meta content="http://www.tirasa.net/images/logo.png" itemprop="url">
 </span>
@@ -23,16 +23,16 @@
 <meta content="Tirasa - Intenzionato a provare Apache Syncope?" name="twitter:title">
 <meta content="Open Source Excellence" name="twitter:description">
 <meta content="@TirasaNet" name="twitter:creator">
-<meta content="http://www.tirasa.net/gallery/tirasa/site/businessproposition/syncopedemo_1.png:thumbnail" name="twitter:image">
+<meta content="http://www.tirasa.net/gallery/tirasa/site/businessproposition/syncopecasdemo.png" name="twitter:image">
 <meta content="Tirasa - Intenzionato a provare Apache Syncope?" property="og:title">
 <meta content="it_IT" property="og:locale">
 <meta content="article" property="og:type">
 <meta content="http://www.tirasa.nete/live/it/businessproposition/apache-syncope-prova.html" property="og:url">
-<meta content="http://www.tirasa.net/gallery/tirasa/site/businessproposition/syncopedemo_1.png:thumbnail" property="og:image">
+<meta content="http://www.tirasa.net/gallery/tirasa/site/businessproposition/syncopecasdemo.png" property="og:image">
 <meta content="Open Source Excellence" property="og:description">
 <meta content="Tirasa" property="og:site_name">
-<meta content="2016-11-03 09:47:12" property="article:published_time">
-<meta content="2016-11-03 09:47:12" property="article:modified_time">
+<meta content="2016-11-10 17:39:07" property="article:published_time">
+<meta content="2016-11-10 17:39:07" property="article:modified_time">
 <meta content="252836668438434" property="fb:app_id">
 <meta charset="UTF-8">
 <link type="image/vnd.microsoft.icon" href="images/favicon.png" rel="shortcut icon">
@@ -176,130 +176,52 @@ vedere Apache Syncope al lavoro, integrato in una
 <a href="/it/businessproposition/identity-access-management.html">soluzione IAM completa</a> o gi&agrave; pronto per
 il Cloud.</p>
 <div id="accordion">
-<h3>Virtual Machine </h3>
+<h3>Immagine Docker </h3>
 
-<div id="vm">
+<div id="docker">
 
-<p>
-<strong>Scarica, installa e avvia</strong>
-</p>
+<img style="margin: 10px;" src="/gallery/tirasa/site/businessproposition/syncopecasdemo.png">
+<p>Questa demo richiede <a target="_blank" href="https://www.docker.com/">Docker</a>
+configurato: se non &egrave; stato fatto in precedenza, procedere con
+<a target="_blank" href="https://docs.docker.com/engine/installation/">l'installazione</a>.</p>
+
+
+<p>Innanzitutto,
+<a target="_blank" href="https://drive.google.com/open?id=1awx0n3L8SgRR6hoz03pudEAodHLiEgSI7xtwsGa4iz8">richiedere</a>
+il link per il download; una volta scaricato, proseguire come segue:</p>
 
 
 <ol>
 
-<li>Scarica
-l'<a target="_blank" href="http://bit.ly/SyncopeDemo">immagine</a>&nbsp;per&nbsp;<a target="_blank" href="http://www.virtualbox.org">VirtualBox</a>
+<li>Decomprimere
+<pre>gunzip syncopecasdemo.tar.gz</pre>
 
 </li>
 
-<li>Avvia VirtualBox</li>
-
-<li>Importa SyncopeDemo.ova tramite VirtualBox--&gt;File--&gt;Import
-Appliance...</li>
-
-<li>Avvia la macchina virtuale SyncopeDemo
-<a onclick="return hs.expand(this)" class="highslide" href="/gallery/tirasa/site/businessproposition/syncopedemo_1.png"><img style="margin: 10px;" src="/gallery/tirasa/site/businessproposition/syncopedemo_1.png:thumbnail"></a>
-</li>
-
-<li>Scegli il kernel di default all'avvio o aspetta alcuni
-secondi&nbsp;<a onclick="return hs.expand(this)" class="highslide" href="/gallery/tirasa/site/businessproposition/syncopedemo_2.png"><img style="margin: 10px;" src="/gallery/tirasa/site/businessproposition/syncopedemo_2.png:thumbnail"></a>
-</li>
-
-<li>Controlla che tutti i servizi si siano avviati
-correttamente&nbsp;<a onclick="return hs.expand(this)" class="highslide" href="/gallery/tirasa/site/businessproposition/syncopedemo_3.png"><img style="margin: 10px;" src="/gallery/tirasa/site/businessproposition/syncopedemo_3.png:thumbnail"></a>
+<li>Caricare in Docker
+<pre>docker load &lt; syncopecasdemo.tar</pre>
 
 </li>
 
-<li>Inserisci le credenziali di accesso (User: root, Password: password)</li>
+<li>Eseguire
+<pre>docker run -d -p 8443:443 -p 8080:6080 \
+  --name syncopecasdemo syncopecasdemo:2.0.1</pre>
 
-<li>Prendi nota dell'ip della macchina virtuale (ifconfig eth0,
-<em>ipvirtualmachine</em> di seguito)</li>
-
-<li>Punta il browser favorito su
-http://<em>ipvirtualmachine</em>:8080/syncope-console</li>
-
-<li>Attenti alcuni istanti affinch&eacute; le applicazioni completino l'installazione
 </li>
-
-<li>Inserisci le credenziali di accesso (User: admin, Password: password)</li>
-
-<li>Benvenuto nella console di amministrazione di Apache Syncope!</li>
 
 </ol>
 
 
-<p>
-<strong><em>Apache Syncope</em></strong>
-</p>
+<p>Infine, puntare il browser web preferito su
+<a target="_blank" href="https://localhost:8443">https://localhost:8443</a> per accedere alla
+documentazione della demo, che funger&agrave; da guida attraverso le funzionalit&agrave;
+disponibili..</p>
 
+<hr>
 
-<p>Oltre a quanto riportato sopra, altre informazioni:</p>
-
-
-<ul>
-
-<li>Connector bundles directory: /var/tmp/syncope/bundles</li>
-
-<li>Log directory: /var/tmp/syncope/log</li>
-
-<li>Lo storage interno &egrave; configurato per PostgreSQL (nome del database, username
-e password sono tutti importati a&nbsp;<em>syncope</em>)</li>
-
-</ul>
-
-
-<p>
-<strong><em>OpenLDAP</em></strong>
-</p>
-
-
-<p>OpenLDAP &egrave; configurato come risorsa esterna di esempio allo scopo di fare
-provisioniing di utenti e ruoli via LDAP.</p>
-
-
-<ul>
-
-<li>Host: <em>ipvirtualmachine</em>
-</li>
-
-<li>Port: 389</li>
-
-<li>Administrator: cn=admin,dc=syncope,dc=tirasa,dc=net</li>
-
-<li>Password: password</li>
-
-<li>Base Context: dc=syncope,dc=tirasa,dc=net</li>
-
-</ul>
-
-
-<p>In alternativa, &egrave; possibile accedere a
-http://<em>ipvirtualmachine</em>/phpldapadmin
-<a onclick="return hs.expand(this)" class="highslide" href="/gallery/tirasa/site/businessproposition/syncopedemo_4.png"><img style="align:right" src="/gallery/tirasa/site/businessproposition/syncopedemo_4.png:thumbnail"></a>
-
-</p>
-
-
-<p>
-<strong><em>MySQL</em></strong>
-</p>
-
-
-<p>MySQL &egrave; configurato come risorsa esterna di esempio allo scopo di fare
-provisioning di utenti su un database relazionale.</p>
-
-
-<ul>
-
-<li>User: root</li>
-
-<li>Password: password</li>
-
-</ul>
-
-
-<p>La &nbsp;console &egrave; all'indirizzo http://<em>ipvirtualmachine</em>/phpmyadmin
-<a onclick="return hs.expand(this)" class="highslide" href="/gallery/tirasa/site/businessproposition/syncopedemo_5.png"><img style="margin: 10px;" src="/gallery/tirasa/site/businessproposition/syncopedemo_5.png:thumbnail"></a>
+<p>Non &egrave; necessario preoccuparsi dell'allerta di sicurezza relativa al
+certificato del server: in caso di incertezza, seguire
+<a target="_blank" href="https://aboutssl.org/ssl-errors-by-browsers">queste istruzioni</a>.
 </p>
 
 </div>
