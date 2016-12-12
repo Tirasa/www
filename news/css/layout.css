@@ -549,6 +549,10 @@ div.tags li.tag9{font-size:180%;}
   margin-bottom: 10px;
 }
 
+div#social {
+    float: left;
+}
+
 .bp {
   margin-bottom: 10px;
   padding-bottom: 5px;
@@ -700,4 +704,9 @@ ol.linenums {
   pre .tag, code .tag { color: #006; font-weight: bold; }
   pre .atn, code .atn { color: #404; }
   pre .atv, code .atv { color: #060; }
+}
+
+div#topnav {
+    position: relative;
+    display: inline-flex;
 }

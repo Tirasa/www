@@ -21,6 +21,7 @@ Licence: <a href="http://www.os-templates.com/template-terms">Website Template L
 	.one_quarter, .two_quarter, .three_quarter, .one_quarter.nogutter, .two_quarter.nogutter, .three_quarter.nogutter, 
 	.one_fifth, .two_fifth, .three_fifth, .four_fifth, .one_fifth.nogutter, .two_fifth.nogutter, .three_fifth.nogutter, .four_fifth.nogutter, 
 	.one_sixth, .two_sixth, .three_sixth, .four_sixth, .five_sixth, .one_sixth.nogutter, .two_sixth.nogutter, .three_sixth.nogutter, .four_sixth.nogutter, .five_sixth.nogutter{display:block; float:none; width:auto; margin:0 0 5% 0; padding:0;}
+	.item {width: 100%;}
 
 	#header hgroup, #header #header-contact{display:block; width:100%; float:none; margin:0 0 15px 0; padding:0; text-align:center;}
 	#header #header-contact{margin:30px 0 0 0;}
@@ -61,6 +62,7 @@ Licence: <a href="http://www.os-templates.com/template-terms">Website Template L
 	.one_quarter, .two_quarter, .three_quarter, .one_quarter.nogutter, .two_quarter.nogutter, .three_quarter.nogutter, 
 	.one_fifth, .two_fifth, .three_fifth, .four_fifth, .one_fifth.nogutter, .two_fifth.nogutter, .three_fifth.nogutter, .four_fifth.nogutter, 
 	.one_sixth, .two_sixth, .three_sixth, .four_sixth, .five_sixth, .one_sixth.nogutter, .two_sixth.nogutter, .three_sixth.nogutter, .four_sixth.nogutter, .five_sixth.nogutter{display:block; float:none; width:auto; margin:0 0 5% 0; padding:0;}
+	.item {width: 100%;}
 	
 	#header hgroup, #header #header-contact{display:block; width:100%; float:none; margin:0 0 15px 0; padding:0;}
 	#header #header-contact{margin:30px 0 0 0;}
@@ -117,7 +119,7 @@ Licence: <a href="http://www.os-templates.com/template-terms">Website Template L
 
 @media screen and (min-width:1200px) {
 	body.boxed .wrapper{max-width:1140px;}
-	#header, #topnav, #intro, #container, #footer, #copyright, .stretched{max-width:940px; margin:0 auto;}
+	#header, #topnav, #intro, #container, #footer, #copyright, .stretched{max-width:95%; margin:0 auto;}
 }
 
 /* Hide The Jquery Generated Navigation Form from 801px upwards */

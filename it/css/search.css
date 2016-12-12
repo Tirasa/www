@@ -1,0 +1,110 @@
+div#search {
+    float: right;
+}
+
+form.gsc-search-box {
+    width: 190px !important;
+    margin: 0px !important;
+}
+
+form.gsc-search-box table {
+    margin: 0px !important;
+    border: none !important;
+}
+
+form.gsc-search-box td{
+    border-left: none !important;
+    border-right: none !important;
+}
+
+.gsib_a {
+    padding: 0 10px !important;
+}
+
+.gsst_a {
+    padding-top: 0px !important;
+    padding-right: 0px !important;
+    padding-left: 0px !important;
+    padding-bottom: 0px !important;
+    background-color: #FFF !important;
+}
+
+.gsc-input-box {
+    height: 23px !important;
+    border-radius: 10px !important;
+}
+
+div.gsc-input-box>table {
+    height: 100%
+}
+
+input.gsc-search-button {
+    background-image: url('https://www.google.com/uds/css/v2/search_box_icon.png') no-repeat !important;
+    border: none !important;
+    box-sizing: unset !important;
+    background-color: transparent !important;
+    min-width: 0px !important;
+    padding: 6px 0 !important;
+}
+
+input.gsc-input {
+    font-size: 14px !important;
+}
+
+td.gsc-input {
+    padding-right: 5px !important;
+}
+
+.gsc-control-cse {
+    padding: 0px !important;
+    background-color: transparent !important;
+    border-color: transparent !important;
+}
+
+div.gs-title a {
+    background-color: transparent !important;
+}
+
+div.gsc-results-wrapper-overlay {
+    max-width: 800px !important;
+}
+
+.gsc-results-wrapper-overlay table {
+    border: none !important;
+    margin-bottom: 0px !important;
+}
+
+table.gsc-table-result td {
+    border-left: none !important;
+    border-right: none !important;
+    padding-right: 8px !important;
+    padding-left: 8px !important;
+}
+
+.gsc-resultsHeader {
+    border: none !important;
+    border-collapse: unset !important;
+    margin: 0px !important;
+}
+
+.gsc-resultsHeader td {
+    border: none !important;
+    border-collapse: unset !important;
+    margin: 0px !important;
+    padding: 0px !important;
+    border-left: none !important;
+    border-right: none !important;
+}
+
+.gsc-above-wrapper-area {
+    padding-top: 10px !important;
+}
+
+.gsc-above-wrapper-area table td {
+    margin-bottom: 0px !important;
+}
+
+.gsc-above-wrapper-area table td {
+    border-left: none !important;
+    border-right: none !important;
+}

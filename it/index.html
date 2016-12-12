@@ -33,39 +33,7 @@
 <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
 <link type="text/css" rel="stylesheet" href="http://fonts.googleapis.com/css?family=Varela+Round|Montserrat:400,700">
 <link type="text/css" rel="stylesheet" href="http://fonts.googleapis.com/css?family=Loved+by+the+King">
-<script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script><script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=true&language=it"></script><script>
-      function initialize() {
-      var mapOptions = {
-      zoom: 16,
-      maxZoom: 16,
-      minZoom: 16,
-      center: new google.maps.LatLng(42.453845, 14.219460),
-      scaleControl: false,
-      
-      panControl: false,
-      zoomControl: false,
-      mapTypeControl: false,
-      scrollwheel: false,
-      streetViewControl: false,
-      overviewMapControl: false,
-      mapTypeId: google.maps.MapTypeId.ROADMAP
-      
-      };
-      var map = new google.maps.Map(document.getElementById("map-canvas"),
-      mapOptions);
-      
-      
-      var marker = new google.maps.Marker({
-      position: new google.maps.LatLng(42.453845, 14.219460),
-      map: map
-      
-      });
-      
-      }
-
-      google.maps.event.addDomListener(window, "load", initialize);
-
-    </script><script src="js/jquery-latest.min.js"></script><script src="js/jquery-ui.min.js"></script><script src="js/jquery-mobilemenu.min.js"></script><script src="js/jquery.cookiesdirective.js"></script><script src="js/js.cookie.js"></script><script src="js/custom.js"></script><script src="js/highslide.js"></script><script type="text/javascript">
+<script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script><script src="js/jquery-latest.min.js"></script><script src="js/jquery-ui.min.js"></script><script src="js/jquery-mobilemenu.min.js"></script><script src="js/jquery.cookiesdirective.js"></script><script src="js/js.cookie.js"></script><script src="js/custom.js"></script><script src="js/highslide.js"></script><script type="text/javascript">
       hs.graphicsDir = 'css/graphics/';
 
       jQuery.noConflict()(function ($) {
@@ -126,6 +94,17 @@
 </ul>
 </div>
 </div>
+<script>
+      (function() {
+      var cx = '015549937949558465034:dcasuwlg2oq';
+      var gcse = document.createElement('script');
+      gcse.type = 'text/javascript';
+      gcse.async = true;
+      gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
+      var s = document.getElementsByTagName('script')[0];
+      s.parentNode.insertBefore(gcse, s);
+      })();
+    </script>
 <div style="padding-bottom: 15px;padding-top: 15px;" class="wrapper row1">
 <header class="full_width clear" id="header">
 <div style="position: relative;float: left;">
@@ -133,10 +112,10 @@
 <a href="http://www.tirasa.net/it/index.html"><img style="width: 200px; margin-top: 1.5%; margin-right: 10px;" src="images/logo.png"></a>
 </h1>
 </div>
-<div style="position: relative;display: inline-flex;" id="topnav">
+<div id="topnav">
 <ul class="clear">
 <li>
-<a class="drop" style="width: 120%;" href="http://www.tirasa.net/it/businessproposition/index.html">Business Proposition</a>
+<a class="drop" style="width: 120%;" href="http://www.tirasa.net/it/businessproposition/index.html">Prodotti e Soluzioni</a>
 <ul>
 <li>
 <a style="width: 120%;" href="http://www.tirasa.net/it/businessproposition/apache-syncope.html">Apache Syncope</a>
@@ -153,6 +132,15 @@
 </ul>
 </li>
 <li>
+<a style="width: 120%;" href="http://www.tirasa.net/it/support.html"></a>
+</li>
+<li>
+<a style="width: 120%;" href="http://blog.tirasa.net/index.html">Blog</a>
+</li>
+<li>
+<a style="width: 120%;" href="http://www.tirasa.net/it/customers.html">Clienti</a>
+</li>
+<li>
 <a title="customers" href="#" class="drop disable_link">Chi siamo</a>
 <ul>
 <li>
@@ -166,16 +154,15 @@
 </li>
 </ul>
 </li>
-<li>
-<a style="width: 120%;" href="http://www.tirasa.net/it/customers.html">Clienti</a>
-</li>
-<li>
-<a style="width: 120%;" href="http://blog.tirasa.net/index.html">Blog</a>
-</li>
 </ul>
 </div>
 <div class="social_header">
+<div id="social">
 <a target="_blank" style="color:#d6d5d5;padding-right:3px;" href="https://github.com/Tirasa"><img alt="github" src="images/github_alt.png"></a><a target="_blank" style="color:#d6d5d5;padding-right:3px;" href="https://twitter.com/TirasaNet"><img alt="twitter" src="images/twitter.png"></a><a target="_blank" style="color:#d6d5d5;padding-right:3px;" href="http://www.linkedin.com/company/2164993"><img alt="linkedin" src="images/linkedin_alt.png"></a><a target="_blank" style="color:#d6d5d5;padding-right:3px;" href="http://www.facebook.com/tirasasrl"><img alt="facebook" src="images/facebook_alt.png"></a><a target="_blank" style="color:#d6d5d5;padding-right:3px" href="http://www.google.com/+TirasaNet"><img alt="g+" src="images/google_plus.png"></a><a target="_blank" style="color:#d6d5d5;padding-right:3px;" href="mailto:info@tirasa.net"><img alt="send an email" src="images/email.png"></a><a target="_blank" style="color:#d6d5d5;padding-right:3px;" href="http://www.tirasa.net/it/rss.xml"><img alt="Blog Post" src="images/feed.png"></a>
+</div>
+<div id="search">
+<div resultsUrl="http://jsfiddle.net/devnook/2PC2f/6/show_html/" class="gcse-search"></div>
+</div>
 </div>
 </header>
 </div>
@@ -211,9 +198,99 @@
 </div>
     
 <span></span>
+  
+<div style="background-color: whitesmoke" class="wrapper row4">
+<div class="clear" id="footer">
     
-<div>
-<div style="padding-top: 50px;padding-bottom: 50px;" class="full_width clear wrapper" id="header">
+<div style="margin-bottom: 20px;" class="three_quarter">
+<div style="padding-top: 10px;">
+<h3>
+<a href="http://www.tirasa.net/it/news/index.html">Ultimi Aggiornamenti</a><a target="_blank" style="color:#d6d5d5;padding-left:5px;" href="http://www.tirasa.net/it/rss.xml"><img style="width:20px;padding-bottom:5px" alt="Tirasa RSS" src="images/feed.png"></a>
+</h3>
+<div class="owl-carousel" id="hshop-slider" style="border-bottom: 1px solid rgba(15,70,100,.12)">
+<div class="item">
+<div class="left-item">
+<img src="/gallery/tirasa/blog/img_20161117_121625.jpg"></div>
+<div class="right-item">
+<a href="http://blog.tirasa.net/back-from-apachecon-sevilla-2016.html" class="purple">
+<h5 class="item-title">Back from ApacheCon Sevilla 2016</h5>
+</a>
+<p>A little excerpt of my amazing experience at ApacheCon 2016 Seville</p>
+</div>
+</div>
+<div class="item">
+<div class="left-item">
+<img src="/gallery/tirasa/site/businessproposition/syncopecasdemo.png"></div>
+<div class="right-item">
+<a href="/it/news/nuova-immagine-demo-iam-integrata.html" class="purple">
+<h5 class="item-title">Nuova immagine Demo IAM Integrata</h5>
+</a>
+<p>Immagine Docker con Syncope ed altre componenti IAM in un ambiente integrato</p>
+</div>
+</div>
+<div class="item">
+<div class="left-item">
+<img src="/gallery/tirasa/blog/angular-protractor.png"></div>
+<div class="right-item">
+<a href="http://blog.tirasa.net/syncope-enduser-testing-part-1.html" class="purple">
+<h5 class="item-title">Apache Syncope Enduser: Testing (part 1)</h5>
+</a>
+<p>Wrapping up Maven &amp; JS best practices to achieve smooth Enduser testing</p>
+</div>
+</div>
+<div class="item">
+<div class="left-item">
+<img src="/gallery/tirasa/site/news/thenewstack.png"></div>
+<div class="right-item">
+<a href="/it/news/the-new-stack-intervista-il-nostro-ceo.html" class="purple">
+<h5 class="item-title">The New Stack intervista il nostro CEO</h5>
+</a>
+<p>Rivista IT online parla di Tirasa e Apache Syncope 2.0</p>
+</div>
+</div>
+<div class="item">
+<div class="left-item">
+<img src="/gallery/tirasa/site/news/dashboard.png"></div>
+<div class="right-item">
+<a href="/it/news/disponibile-apache-syncope-2.0.0.html" class="purple">
+<h5 class="item-title">Disponibile Apache Syncope 2.0.0</h5>
+</a>
+<p>L'atto finale di quasi due anni di intenso sviluppo, ristrutturazione, pulizia e miglioramenti</p>
+</div>
+</div>
+<div class="item">
+<div class="left-item">
+<img title="Tirasa" alt="Tirasa" src="images/farfalla.png"></div>
+<div class="right-item">
+<a href="http://blog.tirasa.net/tale-of-a-twitter-based-review.html" class="purple">
+<h5 class="item-title">Tale of a Twitter-based review</h5>
+</a>
+<p>The uncommon chance to reply to an old review with fresh content. Via Twitter.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+    
+<div class="one_quarter">
+  
+<div style="padding-top: 10px;">
+    
+<h3>
+<a href="#">Tweets</a>
+</h3>
+
+    
+<a class="twitter-timeline" width="625" height="320" data-chrome="noheader nofooter noscrollbar transparent" data-theme="light" data-dnt="true" data-widget-id="806128727264526337" href="https://twitter.com/search?q=%23HippoCocoonToolkit%20OR%20%23ConnId%20OR%20from%3ATirasaNet%20OR%20to%3ATirasaNet%20OR%20%40TirasaNet%20OR%20from%3Asyncopeidm%20OR%20to%3Asyncopeidm%20OR%20%40syncopeidm">Tweet riguardo #HippoCocoonToolkit OR #ConnId OR from:TirasaNet OR to:TirasaNet OR @TirasaNet OR from:syncopeidm OR to:syncopeidm OR @syncopeidm</a>
+    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+  
+</div>
+
+</div>
+  
+</div>
+</div>
+<div class="full_width clear wrapper" id="header">
 <div class="one_quarter">
 <div style="color: yellowgreen; border-bottom: 1px solid yellowgreen;" class="bp">
 <a style="color: yellowgreen;" href="businessproposition/apache-syncope.html">SYNCOPE</a>
@@ -283,183 +360,6 @@
 <li class="margin_b_ten">
 <i class="fa-li fa fa-check-square" style="color: darkorange;"></i>Protagonisti del panorama Open Source</li>
 </ul>
-</div>
-</div>
-<div style=" background-color: whitesmoke; padding-bottom: 55px; padding-top: 40px; " class="wrapper row3">
-<div style="padding-top: 0px;" id="container">
-<div class="clear" id="homepage">
-<section class="last clear">
-<div class="">
-<div style="border-bottom: 2px solid #9293c8;margin-bottom: 10px;padding-bottom: 5px;font-family: 'Montserrat';font-size: 20px;padding-left: 10px;padding-top: 10px;">
-<a href="news/index.html">News</a><a target="_blank" style="color:#d6d5d5;padding-left:5px;" href="http://blog.tirasa.net/rss.xml"><img style="width:20px;padding-bottom:5px" alt="Tirasa News RSS" src="images/feed.png"></a>
-</div>
-<ul style="border-bottom: 2px solid #9293c8;padding-bottom: 5px;padding-left: 10px;" class="nospace clear">
-<li class="one_fifth">
-<article>
-<h1 style="margin:0px;text-transform:none;font-size:16px;padding-top: 10px;">
-<a href="http://blog.tirasa.net/back-from-apachecon-sevilla-2016.html" class="purple">Back from ApacheCon Sevilla 2016</a>
-</h1>
-<p style="font-size:13px">A little excerpt of my amazing experience at ApacheCon 2016 Seville</p>
-</article>
-</li>
-<li class="one_fifth">
-<article>
-<h1 style="margin:0px;text-transform:none;font-size:16px;padding-top: 10px;">
-<a href="/it/news/nuova-immagine-demo-iam-integrata.html" class="purple">Nuova immagine Demo IAM Integrata</a>
-</h1>
-<p style="font-size:13px">Immagine Docker con Syncope ed altre componenti IAM in un ambiente integrato</p>
-</article>
-</li>
-<li class="one_fifth">
-<article>
-<h1 style="margin:0px;text-transform:none;font-size:16px;padding-top: 10px;">
-<a href="http://blog.tirasa.net/syncope-enduser-testing-part-1.html" class="purple">Apache Syncope Enduser: Testing (part 1)</a>
-</h1>
-<p style="font-size:13px">Wrapping up Maven &amp; JS best practices to achieve smooth Enduser testing</p>
-</article>
-</li>
-<li class="one_fifth">
-<article>
-<h1 style="margin:0px;text-transform:none;font-size:16px;padding-top: 10px;">
-<a href="/it/news/the-new-stack-intervista-il-nostro-ceo.html" class="purple">The New Stack intervista il nostro CEO</a>
-</h1>
-<p style="font-size:13px">Rivista IT online parla di Tirasa e Apache Syncope 2.0</p>
-</article>
-</li>
-<li class="one_fifth">
-<article>
-<h1 style="margin:0px;text-transform:none;font-size:16px;padding-top: 10px;">
-<a href="/it/news/disponibile-apache-syncope-2.0.0.html" class="purple">Disponibile Apache Syncope 2.0.0</a>
-</h1>
-<p style="font-size:13px">L'atto finale di quasi due anni di intenso sviluppo, ristrutturazione, pulizia ...
-                              </p>
-</article>
-</li>
-</ul>
-</div>
-</section>
-</div>
-</div>
-</div>
-<div>
-<div class="clear badge">
-<strong>Tirasa S.r.l.</strong>
-<br>
-<p>Viale Gabriele D'Annunzio 267, 65127 Pescara</p>
-<br>
-<strong>mail: </strong>info@tirasa.net
-          <br>
-<strong>phone: </strong>+39 0859116307
-          <br>
-<ul>
-<li style="display:inline;">
-<a target="_blank" style="color:#d6d5d5;padding-right:3px;" href="https://github.com/Tirasa"><img alt="github" src="images/github_alt.png"></a>
-</li>
-<li style="display:inline;">
-<a target="_blank" style="color:#d6d5d5;padding-right:3px;" href="https://twitter.com/TirasaNet"><img alt="twitter" src="images/twitter.png"></a>
-</li>
-<li style="display:inline">
-<a target="_blank" style="color:#d6d5d5;padding-right:3px;" href="http://www.linkedin.com/company/2164993"><img alt="linkedin" src="images/linkedin_alt.png"></a>
-</li>
-<li style="display:inline">
-<a target="_blank" style="color:#d6d5d5;padding-right:3px;" href="http://www.facebook.com/tirasasrl"><img alt="facebook" src="images/facebook_alt.png"></a>
-</li>
-<li style="display:inline">
-<a target="_blank" style="color:#d6d5d5;padding-right:15px" href="http://www.google.com/+TirasaNet"><img alt="g+" src="images/google_plus.png"></a>
-</li>
-</ul>
-</div>
-<div style=" overflow: hidden; height: 40%; margin: 0px; padding: 0; border-radius: 0; border: 0px solid #34302D; " id="map-canvas"></div>
-</div>
-</div>
-  
-<div style="margin-top: 25px; margin-bottom: 25px;" class="wrapper row4">
-<div class="clear" id="footer">
-    
-<div class="one_quarter">
-<h2 class="footer_title">Ultimi post&nbsp;&nbsp;</h2>
-<div class="tweet-container">
-<ul class="list none">
-<li>
-<strong><a href="http://blog.tirasa.net/back-from-apachecon-sevilla-2016.html" style="text-decoration: none;">
-<field name="tirasa:title">
-<value>Back from ApacheCon Sevilla 2016</value>
-</field>
-</a>
-<br>
-</strong>
-</li>
-<li>
-<strong><a href="http://blog.tirasa.net/syncope-enduser-testing-part-1.html" style="text-decoration: none;">
-<field name="tirasa:title">
-<value>Apache Syncope Enduser: Testing (part 1)</value>
-</field>
-</a>
-<br>
-</strong>
-</li>
-<li>
-<strong><a href="http://blog.tirasa.net/tale-of-a-twitter-based-review.html" style="text-decoration: none;">
-<field name="tirasa:title">
-<value>Tale of a Twitter-based review</value>
-</field>
-</a>
-<br>
-</strong>
-</li>
-<li>
-<strong><a href="http://blog.tirasa.net/syncope-enduser-security-features.html" style="text-decoration: none;">
-<field name="tirasa:title">
-<value>The new Apache Syncope Enduser</value>
-</field>
-</a>
-<br>
-</strong>
-</li>
-<li>
-<strong><a href="http://blog.tirasa.net/apache-cli-client.html" style="text-decoration: none;">
-<field name="tirasa:title">
-<value>The new Apache Syncope CLI client</value>
-</field>
-</a>
-<br>
-</strong>
-</li>
-<li>
-<strong><a href="http://blog.tirasa.net/custom-policies-with-apache-syncope.html" style="text-decoration: none;">
-<field name="tirasa:title">
-<value>Custom policies with Apache Syncope</value>
-</field>
-</a>
-<br>
-</strong>
-</li>
-</ul>
-</div>
-</div>
-    
-<div class="one_quarter">
-<h2 class="footer_title">Apache Syncope</h2>
-<p>Abbiamo concepito Syncope perch&eacute; esperti di IdM e appassionati di Open
-Source. L'idea era quella di creare un Identity Manager Open Source agile,
-leggero ed incisivo in grado di soddisfare i requisiti degli ambienti
-enterprise.</p>
-<p>Abbiamo fondato <a href="http://www.tirasa.net/">Tirasa</a> con l'obiettivo
-di acceleare lo sviluppo e la diffusione di Syncope IdM.</p>
-<p>Nel Febbraio 2012 abbiamo donato Syncope IdM
-all'<a target="_blank" href="http://www.apache.org/">Apache Software
-Foundation</a>.</p>
-</div>
-    
-<div class="two_quarter">
-  
-<h2 class="footer_title">Tweets</h2>
-  
-<a class="twitter-timeline" width="625" height="320" data-theme="dark" data-chrome="noheader nofooter noscrollbar transparent" data-dnt="true" data-widget-id="806128727264526337" href="https://twitter.com/search?q=%23HippoCocoonToolkit%20OR%20%23ConnId%20OR%20from%3ATirasaNet%20OR%20to%3ATirasaNet%20OR%20%40TirasaNet%20OR%20from%3Asyncopeidm%20OR%20to%3Asyncopeidm%20OR%20%40syncopeidm">Tweet riguardo #HippoCocoonToolkit OR #ConnId OR from:TirasaNet OR to:TirasaNet OR @TirasaNet OR from:syncopeidm OR to:syncopeidm OR @syncopeidm</a>
-  <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
-
-</div>
-  
 </div>
 </div>
 <div style="background-color: #9293c8;" class="wrapper row2">
