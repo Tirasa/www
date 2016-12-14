@@ -53,6 +53,10 @@ img {
   border-radius: 5px;
 }
 
+.gray img {
+  width: 154px;
+}
+
 .boxholder{padding:9px; border:1px solid #D6D6D6;}
 .imgl{float:left; margin:0 15px 10px 0; clear:left;}
 .imgr{float:right; margin:0 0 10px 15px; clear:right;}
