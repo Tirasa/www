@@ -367,6 +367,7 @@ table tbody tr.dark{color:#979797; background-color:#E8E8E8;}
     float: left;
     display: block;
     width: 110px;
+    height: 100px;
 }
 
 .right-item {
