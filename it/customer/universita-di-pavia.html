@@ -11,8 +11,8 @@
 <meta content="Open Source Excellence" itemprop="description">
 <meta content="Open Source Excellence" itemprop="headline">
 <meta content="http://www.tirasa.nete/live/it/customer/universita-di-pavia.html" itemprop="url">
-<meta content="2017-11-07 16:44:28" itemprop="dateModified">
-<meta content="2017-11-07 16:44:28" itemprop="datePublished">
+<meta content="2017-12-15 10:42:37" itemprop="dateModified">
+<meta content="2017-12-15 10:42:37" itemprop="datePublished">
 <span itemtype="https://schema.org/Corporation" itemscope="" itemprop="publisher"><span itemtype="https://schema.org/ImageObject" itemscope="" itemprop="logo">
 <meta content="http://www.tirasa.net/images/logo.png" itemprop="url">
 </span>
@@ -31,8 +31,8 @@
 <meta content="http://www.tirasa.net/gallery/tirasa/site/customers/FattPACS-Architecture.png" property="og:image">
 <meta content="Open Source Excellence" property="og:description">
 <meta content="Tirasa" property="og:site_name">
-<meta content="2017-11-07 16:44:28" property="article:published_time">
-<meta content="2017-11-07 16:44:28" property="article:modified_time">
+<meta content="2017-12-15 10:42:37" property="article:published_time">
+<meta content="2017-12-15 10:42:37" property="article:modified_time">
 <meta content="252836668438434" property="fb:app_id">
 <meta charset="UTF-8">
 <link type="image/vnd.microsoft.icon" href="images/favicon.png" rel="shortcut icon">
@@ -192,56 +192,27 @@ Essa &egrave; fra le pi&ugrave; antiche del mondo e fa parte del gruppo di Coimb
 universitaria europea che raggruppa 39 universit&agrave;, alcune delle quali tra le pi&ugrave;
 antiche e prestigiose in Europa, fondata nel 1985 e formalmente costituita nel
 1987).</p>
-<p>Recentemente sono state intavolate discussioni per valutare i benefici di
-un&rsquo;eventuale introduzione di una soluzione completa di Identity &amp; Access
-Management (IAM) nell&rsquo;attuale infrastruttura IT di questa prestigiosa
-universit&agrave;. A valle di alcune considerazioni circa l&rsquo;attuale sistema di
-controllo degli accessi alle risorse fisiche, si &egrave; giunti alla conclusione che
-l&rsquo;introduzione di tale soluzione possa portare ad un duplice beneficio: da un
-lato essa consentirebbe di far fronte all&rsquo;esigenza di migliorare gli attuali
-meccanismi di controllo degli accessi a risorse online e dall&rsquo;altro
-permetterebbe di supportare e migliorare il controllo degli accessi a risorse
-quali parcheggi e locali riservati. <br>
-Con l&rsquo;introduzione delle suddette risorse fisiche la discussione si &egrave; spostata,
-dunque, ad un livello superiore: dalla classica soluzione IAM si &egrave; passati a
-valutare l&rsquo;introduzione di una soluzione <strong>Physical Identity &amp; Access
-Management (PIAM)</strong>.</p>
-<p>&Egrave; stato dunque individuato un possibile progetto PIAM che per dimensione
-economica, complessit&agrave; dell&rsquo;intervento, incertezza sui requisiti, presenza di
-possibili alternative, richiedeva un approfondimento prima che potesse esserne
-avviata la realizzazione. <br>
-Tale approfondimento &egrave; stato il risultato di uno studio di fattibilit&agrave; sche ha
-preso in considerazione i sistemi informatici coinvolti nell&rsquo;area di intervento,
-sia hardware che software.</p>
-<p>La soluzione proposta da Tirasa &egrave; quella mostrata in figura.</p>
+<p>Dopo aver affidato a Tirasa la redazione di uno studio di fattibilit&agrave;
+relativo ad una soluzione IAM che, oltre al livello applicativo, tenesse conto
+anche del controllo degli accessi a risorse quali parcheggi e locali riservati,
+l'Universit&agrave; ha inoltre provveduto ad incaricare la stessa azienda della
+realizzazione di una vera e propria soluzione <strong>Physical Identity &amp;
+Access Management (PIAM)</strong>.</p>
 <img style="margin: 10px;" src="/gallery/tirasa/site/customers/FattPACS-Architecture.png"><br>
-<p>Nella soluzione proposta i sistemi periferici, parcheggi, aree riservate e
-biblioteche, mostrati sul lato sinistro della figura, comunicano via HTTP(s) con
-il sistema centrale. Quest&rsquo;ultimo, il quale fornisce tutte le funzionalit&agrave; per
-la gestione delle identit&agrave; digitali, per il controllo degli accessi e per il
-Single Sign-On, &egrave; basato su due componenti principali:</p>
-<ul>
-
-<li>
-<strong>Identity Manager (IdM)</strong> &ndash; sistema di gestione delle identit&agrave;
-digitali (Identity Manager);</li>
-
-<li>
-<strong>Access Manager (AM)</strong> &ndash; sistema di controllo degli accessi e
-Single Sign-On (Access Manager).</li>
-
-</ul>
-<p>Intorno alle componenti del sistema centrale orbitano tutte le altre risorse
-evidenziate in questo studio. <br>
-Tali risorse sono generalmente interessate da operazioni di sincronizzazione di
-dati. Da queste l'IdM reperisce le informazioni da sincronizzare localmente.
+<p>Nella soluzione proposta i sistemi periferici - parcheggi, aree riservate e
+biblioteche, mostrati sul lato sinistro della figura - comunicano via HTTP(s)
+con il sistema centrale, che fornisce tutte le funzionalit&agrave; per la gestione
+delle identit&agrave; digitali, per il controllo degli accessi e per il Single Sign-On.
 </p>
-<p>Le risorse collegate ai sistemi periferici non sono interessate da alcuna
-operazione di provisioning dei dati. Esse sono collegate al sistema centrale
-solo per la verifica delle credenziali e delle autorizzazioni. <br>
-Anche le risorse online, sebbene con modalit&agrave; diverse da quelle previste per i
-sistemi periferici, sono collegate al sistema centrale per gli stessi motivi.
-</p>
+<p>L'implementazione, basata
+sull'<a target="_blank" href="http://blog.tirasa.net/the-open-source-identity-stack.html">Open
+Source Identity Stack</a>, &egrave; in grado di gestire le utenze ed i permessi sia su
+LDAP sia, tramite SOAP, sulla suite per il controllo degli accessi fisici
+<a target="_blank" href="http://www.axesstmc.com/xatlas/?lang=it">Xatlas</a>. L'accesso al
+sistema &egrave; inoltre possibile anche tramite
+<a href="/it/news/spid-in-salsa-open-source.html">SPID</a>, grazie all'estensione funzionale
+fornita da Tirasa.</p>
+<img style="margin: 10px;" src="/gallery/tirasa/site/customers/piam-architecture.png"><p>&nbsp;</p>
 <a target="_blank" href="http://www.linkedin.com/shareArticle?mini=true&url=http://www.tirasa.net/it/universita-di-pavia.html&title=&summary="><img alt="" src="images/linkedin_square_color-24.png"></a>&nbsp;
             <a target="_blank" href="https://twitter.com/intent/tweet?url=http://www.tirasa.net/it/universita-di-pavia.html&text="><img alt="" src="images/twitter_square-24.png"></a>&nbsp;
             <a target="_blank" href="https://facebook.com/sharer.php?u=http://www.tirasa.net/it/universita-di-pavia.html"><img alt="" src="images/facebook_square-24.png"></a>&nbsp;
