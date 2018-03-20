@@ -14,8 +14,6 @@ body{
   font-size:14px;
   color:#d6d5d5;
   background-color:#34302D;
-  width: 100%;
-  overflow-x: hidden;
 }
 body.boxed{color:#d6d5d5; background-color:#34302D;}
 
