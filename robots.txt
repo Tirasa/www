@@ -1,3 +1,2 @@
 User-agent: *
-Allow: /
-sitemap: http://www.tirasa.net/sitemap.xml
+Disallow: /
